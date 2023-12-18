@@ -40,3 +40,5 @@ set expandtab " insert spaces when tab key is pressed
 set nobackup " turn off backup file feature with ___~ character
 set number " show line numbers
 set ruler " show row and column of cursor
+
+set backspace=indent,eol,start " make backspace work properly, inserting this precautionarily
