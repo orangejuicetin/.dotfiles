@@ -117,3 +117,5 @@ eval "$(rbenv init - zsh)"
 
 export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:$GOPATH/bin
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

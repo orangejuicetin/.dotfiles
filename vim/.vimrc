@@ -42,3 +42,38 @@ set number " show line numbers
 set ruler " show row and column of cursor
 
 set backspace=indent,eol,start " make backspace work properly, inserting this precautionarily
+highlight LineNr ctermfg=grey
+set colorcolumn=80
+highlight ColorColumn ctermbg=grey
+
+runtime! ftplugin/man.vim
+
+let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
+if empty(glob(data_dir . '/autoload/plug.vim'))
+      silent execute '!curl -fLo '.data_dir.'/autoload/plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+      autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
+" using vim-plug here: https://github.com/junegunn/vim-plug
+call plug#begin()
+" The default plugin directory will be as follows:
+"   - Vim (Linux/macOS): '~/.vim/plugged'
+"   - Vim (Windows): '~/vimfiles/plugged'
+"   - Neovim (Linux/macOS/Windows): stdpath('data') . '/plugged'
+" You can specify a custom plugin directory by passing it as the argument
+"   - e.g. `call plug#begin('~/.vim/plugged')`
+"   - Avoid using standard Vim directory names like 'plugin'
+"
+" Make sure you use single quotes
+"
+" Shorthand notation; fetches https://github.com/junegunn/vim-easy-align
+" Plug 'junegunn/vim-easy-align'
+Plug 'junegunn/seoul256.vim'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+Plug 'vim-airline/vim-airline'
+call plug#end()
+
+let g:seoul256_background = 235
+colorscheme seoul256
+
