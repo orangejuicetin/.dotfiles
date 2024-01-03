@@ -42,19 +42,23 @@ set number " show line numbers
 set ruler " show row and column of cursor
 
 set backspace=indent,eol,start " make backspace work properly, inserting this precautionarily
+
+" set line length limiter color to be more subtle
 highlight LineNr ctermfg=grey
 set colorcolumn=80
 highlight ColorColumn ctermbg=grey
 
+" allow man pages to be called with :Man
 runtime! ftplugin/man.vim
 
+" add in vim-plug automatically if not already there
 let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
 if empty(glob(data_dir . '/autoload/plug.vim'))
       silent execute '!curl -fLo '.data_dir.'/autoload/plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
       autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
-" using vim-plug here: https://github.com/junegunn/vim-plug
+" begin plugin installations: https://github.com/junegunn/vim-plug
 call plug#begin()
 " The default plugin directory will be as follows:
 "   - Vim (Linux/macOS): '~/.vim/plugged'
@@ -74,6 +78,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'vim-airline/vim-airline'
 call plug#end()
 
+" make seoul256 background slightly darker than standard
 let g:seoul256_background = 235
 colorscheme seoul256
 
