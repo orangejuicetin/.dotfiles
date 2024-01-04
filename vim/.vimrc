@@ -19,6 +19,17 @@ set ignorecase " ignore case when searching
 set smartcase " no ignorecase if Uppercase char is present
 set showmatch " jump to match when searching regex
 
+" This enables relative line numbering mode. With both number and
+" relativenumber enabled, the current line shows the true line number, while
+" all other lines (above and below) are numbered relative to the current
+"ine.
+" This is useful because you can tell, at a glance, what count is needed to
+" jump up or down to a particular line, by {count}k to go up or {count}j to go down.
+" set relativenumber
+
+" Always show the status line at the bottom, even if you only have one window open.
+set laststatus=2
+
 " Put these in an autocmd group, so that we can delete them easily.
 augroup vimrcEx
   au!
