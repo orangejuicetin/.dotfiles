@@ -10,7 +10,7 @@ if v:progname =~? "evim"
   finish
 endif
 
-" Get the defaults that most users want.
+" Get the defaults that most users want. (note: old ubuntu runs into issues)
 source $VIMRUNTIME/defaults.vim
 
 set hlsearch " highlight your searches
@@ -70,6 +70,8 @@ if empty(glob(data_dir . '/autoload/plug.vim'))
 endif
 
 " begin plugin installations: https://github.com/junegunn/vim-plug
+" same thing here, watch out for fzf/ripgrep not working on older ubuntu
+" installations
 call plug#begin()
 " The default plugin directory will be as follows:
 "   - Vim (Linux/macOS): '~/.vim/plugged'
