@@ -10,9 +10,6 @@ if v:progname =~? "evim"
   finish
 endif
 
-" Get the defaults that most users want. (note: old ubuntu runs into issues)
-source $VIMRUNTIME/defaults.vim
-
 set hlsearch " highlight your searches
 set incsearch " incremental search
 set ignorecase " ignore case when searching
