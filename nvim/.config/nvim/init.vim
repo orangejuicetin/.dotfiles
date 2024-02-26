@@ -26,23 +26,15 @@ set showmatch " jump to match when searching regex
 " Always show the status line at the bottom, even if you only have one window open.
 set laststatus=2
 
-" Put these in an autocmd group, so that we can delete them easily.
-augroup vimrcEx
-  au!
-
-  " For all text files set 'textwidth' to 78 characters.
-  autocmd FileType * set textwidth=78
-augroup END
-
-" Add optional packages. -----------
-
-syntax on
-filetype plugin indent on " detect filetype, load respective plugin and indent file 
-
-set autoindent
 set shiftwidth=4 " how much to shift text using > 
 set softtabstop=4 "softtabstop smartly inserts spaces/tabs
 set expandtab " insert spaces when tab key is pressed
+
+" these settings should help hard-wrap text my inserting a newline
+set textwidth=78
+set wrapmargin=0
+set formatoptions+=t
+set linebreak
 
 set nobackup " turn off backup file feature with ___~ character
 set number " show line numbers
