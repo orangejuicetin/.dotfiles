@@ -4,7 +4,7 @@
 ## this is for linux machines, will have mac alternates in comments
 # brew install fzf ripgrep stow
 
-sudo apt-get update && sudo apt-get install stow fzf ripgrep
+sudo apt-get update && sudo apt-get install stow fzf ripgrep neovim
 git clone https://github.com/orangejuicetin/.dotfiles.git 
-cd .dotfiles && stow vim tmux 
+cd .dotfiles && stow nvim tmux 
 
