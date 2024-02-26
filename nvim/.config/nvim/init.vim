@@ -75,7 +75,8 @@ call plug#begin()
 " Plug 'junegunn/vim-easy-align'
 Plug 'junegunn/seoul256.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
+" Plug 'junegunn/fzf.vim'
+Plug 'ibhagwan/fzf-lua', {'branch': 'main'}
 Plug 'vim-airline/vim-airline'
 call plug#end()
 
