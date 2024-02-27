@@ -50,6 +50,17 @@ highlight ColorColumn ctermbg=grey
 " allow man pages to be called with :Man
 runtime! ftplugin/man.vim
 
+" trimming whitespace helpers
+set list listchars=tab:\ \ ,nbsp:␣,trail:•,extends:⟩,precedes:⟨
+
+fun! TrimWhitespace()
+    let l:save = winsaveview()
+    keeppatterns %s/\s\+$//e
+    call winrestview(l:save)
+endfun
+
+command! TrimWhitespace call TrimWhitespace()
+
 " add in vim-plug automatically if not already there
 let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
 if empty(glob(data_dir . '/autoload/plug.vim'))
@@ -80,6 +91,7 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 " `:FzfLua setup_fzfvim_cmds` to get the same commands as fzf.vim
 Plug 'ibhagwan/fzf-lua', {'branch': 'main'}
 Plug 'vim-airline/vim-airline'
+Plug 'ntpeters/vim-better-whitespace'
 call plug#end()
 
 " make seoul256 background slightly darker than standard

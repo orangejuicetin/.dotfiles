@@ -51,6 +51,17 @@ set ruler " show row and column of cursor
 
 set backspace=indent,eol,start " make backspace work properly, inserting this precautionarily
 
+" trimming whitespace helpers
+set list listchars=tab:\ \ ,nbsp:␣,trail:•,extends:⟩,precedes:⟨
+
+fun! TrimWhitespace()
+    let l:save = winsaveview()
+    keeppatterns %s/\s\+$//e
+    call winrestview(l:save)
+endfun
+
+command! TrimWhitespace call TrimWhitespace()
+
 " set line length limiter color to be more subtle
 highlight LineNr ctermfg=grey
 set colorcolumn=80
