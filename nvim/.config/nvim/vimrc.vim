@@ -31,7 +31,7 @@ set softtabstop=4 "softtabstop smartly inserts spaces/tabs
 set expandtab " insert spaces when tab key is pressed
 
 " these settings should help hard-wrap text my inserting a newline
-set textwidth=78
+set textwidth=80
 set wrapmargin=0
 set formatoptions+=t
 set linebreak
@@ -82,8 +82,6 @@ call plug#begin()
 "
 " Make sure you use single quotes
 "
-" Shorthand notation; fetches https://github.com/junegunn/vim-easy-align
-" Plug 'junegunn/vim-easy-align'
 Plug 'junegunn/seoul256.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 " Plug 'junegunn/fzf.vim'
@@ -91,10 +89,9 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 " `:FzfLua setup_fzfvim_cmds` to get the same commands as fzf.vim
 Plug 'ibhagwan/fzf-lua', {'branch': 'main'}
 Plug 'vim-airline/vim-airline'
-Plug 'ntpeters/vim-better-whitespace'
 call plug#end()
 
 " make seoul256 background slightly darker than standard
-let g:seoul256_background = 235
+let g:seoul256_background = 234
 colorscheme seoul256
 
