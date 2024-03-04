@@ -84,10 +84,10 @@ call plug#begin()
 "
 Plug 'junegunn/seoul256.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-" Plug 'junegunn/fzf.vim'
+Plug 'junegunn/fzf.vim'
 " https://github.com/ibhagwan/fzf-lua?tab=readme-ov-file#coming-from-fzfvim 
 " `:FzfLua setup_fzfvim_cmds` to get the same commands as fzf.vim
-Plug 'ibhagwan/fzf-lua', {'branch': 'main'}
+" Plug 'ibhagwan/fzf-lua', {'branch': 'main'}
 Plug 'vim-airline/vim-airline'
 call plug#end()
 
