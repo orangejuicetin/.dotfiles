@@ -1,6 +1,6 @@
 -- if you want to use your other (formerly init.vim) vimrc.vim file, uncomment
--- local vimrc = vim.fn.stdpath("config") .. "/vimrc.vim"
--- vim.cmd.source(vimrc)
+local vimrc = vim.fn.stdpath("config") .. "/vimrc.vim"
+vim.cmd.source(vimrc)
 
 -- Make line numbers default
 vim.opt.number = true
@@ -48,27 +48,27 @@ vim.cmd 'colorscheme seoul256'
 -- after this run :MasonInstall rust-analyzer codelldb to install and manage
 -- https://rsdlt.github.io/posts/rust-nvim-ide-guide-walkthrough-development-debug/#1-download-rust-analyzer-and-codelldb-with-neovims-plugins
 
-local lspconfig = require('lspconfig')
-lspconfig.rust_analyzer.setup({
-    settings = {
-        ["rust-analyzer"] = {
-            imports = {
-                granularity = {
-                    group = "module",
-                },
-                prefix = "self",
-            },
-            cargo = {
-                buildScripts = {
-                    enable = true,
-                },
-            },
-            procMacro = {
-                enable = true
-            },
-        }
-    }
-})
+-- local lspconfig = require('lspconfig')
+-- lspconfig.rust_analyzer.setup({
+--     settings = {
+--         ["rust-analyzer"] = {
+--             imports = {
+--                 granularity = {
+--                     group = "module",
+--                 },
+--                 prefix = "self",
+--             },
+--             cargo = {
+--                 buildScripts = {
+--                     enable = true,
+--                 },
+--             },
+--             procMacro = {
+--                 enable = true
+--             },
+--         }
+--     }
+-- })
 
 -- Global mappings.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions
@@ -110,7 +110,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
 
 vim.opt.listchars = {
   tab = "» ",
-  trail = "·",
+  trail = "•",
   extends = "›",
   precedes = "‹",
   nbsp = "␣",
