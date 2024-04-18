@@ -33,8 +33,6 @@ Plug('junegunn/fzf', { ['dir'] = '~/.fzf', ['do'] = './install --all' })
 --`:FzfLua setup_fzfvim_cmds` to get the same commands as fzf.vim
 Plug('ibhagwan/fzf-lua', { ['branch'] = 'main'})
 Plug('vim-airline/vim-airline')
-Plug 'williamboman/mason.nvim'
-Plug 'williamboman/mason-lspconfig.nvim'
 Plug 'neovim/nvim-lspconfig'
 Plug 'stevearc/oil.nvim'
 vim.call('plug#end')
@@ -275,7 +273,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
 
 vim.opt.listchars = {
   tab = "» ",
-  trail = "•", 
+  trail = "•",
   extends = "›",
   precedes = "‹",
   nbsp = "␣",
