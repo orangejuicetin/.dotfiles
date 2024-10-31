@@ -1,8 +1,5 @@
-
-" An example for a vimrc file.
-"
-" Maintainer:	Bram Moolenaar <Bram@vim.org>
-" Last change:	2019 Dec 17
+" Maintainer:   Justin Choi <justin.choi@alumni.upenn.edu>	
+" Last change:  2024 Oct 31	
 "
 " When started as "evim", evim.vim will already have done these settings, bail
 " out.
@@ -37,13 +34,19 @@ augroup END
 
 " Add optional packages. -----------
 
-syntax on
-filetype plugin indent on " detect filetype, load respective plugin and indent file 
+" syntax on
+" filetype plugin indent on " detect filetype, load respective plugin and indent file
 
-set autoindent
+"" set autoindent
 set shiftwidth=4 " how much to shift text using > 
 set softtabstop=4 "softtabstop smartly inserts spaces/tabs
 set expandtab " insert spaces when tab key is pressed
+
+" these settings should help hard-wrap text my inserting a newline
+set textwidth=80
+set wrapmargin=0
+set formatoptions+=t
+set linebreak
 
 set nobackup " turn off backup file feature with ___~ character
 set number " show line numbers

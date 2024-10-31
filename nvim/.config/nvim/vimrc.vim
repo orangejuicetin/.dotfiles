@@ -1,7 +1,5 @@
-" An example for a vimrc file.
-"
-" Maintainer:	Bram Moolenaar <Bram@vim.org>
-" Last change:	2019 Dec 17
+" Maintainer:   Justin Choi <justin.choi@alumni.upenn.edu>
+" Last change:  2024 Oct 31
 "
 " When started as "evim", evim.vim will already have done these settings, bail
 " out.
