@@ -34,12 +34,13 @@ augroup END
 
 " Add optional packages. -----------
 
-" syntax on
-" filetype plugin indent on " detect filetype, load respective plugin and indent file
+syntax on
+filetype plugin indent on " detect filetype, load respective plugin and indent file
 
-"" set autoindent
-set shiftwidth=4 " how much to shift text using > 
-set softtabstop=4 "softtabstop smartly inserts spaces/tabs
+set autoindent
+set copyindent
+set shiftwidth=8 " how much to shift text using >
+set softtabstop=8 "softtabstop smartly inserts spaces/tabs
 set expandtab " insert spaces when tab key is pressed
 
 " these settings should help hard-wrap text my inserting a newline
